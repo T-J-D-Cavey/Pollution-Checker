@@ -11,7 +11,6 @@ export const getResults = createAsyncThunk(
             location: data.data.city.name,
             url: data.data.city.url
         };
-        console.log(result);
         return result;
     }
 )
@@ -35,10 +34,8 @@ const resultsSlice = createSlice({
         builder
             .addCase(getResults.pending, (state) => {
                 state.status = 'loading';
-                console.log('pending action creator')
             })
             .addCase(getResults.fulfilled, (state, action) => {
-                console.log(action.payload.aqi)
                 state.score = action.payload.aqi;
                 state.location = action.payload.location;
                 state.link = action.payload.url;
