@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 
 import {scoreSelector, statusSelector, zoneSelector, linkSelector, changeZone} from '../redux/resultsSlice';
-import {LoadingComponent} from './LoadingComponent';
+import {FailedToLoadComponent} from './FailedToLoadComponent';
 import {ScoreComponent} from './ScoreComponent';
 import {zoneArray} from '../api/Api';
 import {CardComponent} from './CardComponent';
@@ -18,7 +18,10 @@ export function ResultsComponent() {
     const link = useSelector(linkSelector);
 
     useEffect(() => {
-        if (score <= 50) {
+        if (score === 'refresh') {
+            navigate('/')
+        }
+        else if (score <= 50) {
             dispatch(changeZone(0));
         }
         else if (score > 50 && score <= 100) {
@@ -37,18 +40,15 @@ export function ResultsComponent() {
             dispatch(changeZone(5));
         }
         else {
-            // This is supposed to fix an issue where refreshing on the results page results in a white screen. But it doesn't seem to work
             navigate('/');
         }
 
     }, [])
-
-    console.log(link);
     
     return (
-        status === 'loading' ?
+        status === 'failed' ?
         <div>
-            <LoadingComponent />
+            <FailedToLoadComponent />
         </div>
         :
         <div className={zoneArray[zone].color}>

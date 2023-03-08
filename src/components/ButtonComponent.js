@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import {getResults} from "../redux/resultsSlice";
 import {urlIp} from '../api/Api';
@@ -9,10 +10,13 @@ export function ButtonComponent() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    
+    useEffect(() => {
+        dispatch(getResults(urlIp))
+    }, [])
+
     function clickHandler(e) {
         e.preventDefault();
-        dispatch(getResults(urlIp));
+        // dispatch(getResults(urlIp));
         navigate('results')
     }
 

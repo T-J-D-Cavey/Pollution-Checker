@@ -19,8 +19,8 @@ export const getResults = createAsyncThunk(
 const resultsSlice = createSlice({
     name: 'results',
     initialState: {
-        score: null,
-        zone: null,
+        score: 'refresh',
+        zone: 1,
         location: null,
         link: null,
         status: null
