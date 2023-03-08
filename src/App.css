@@ -20,3 +20,11 @@
 .maroon {
     background-color: maroon;
 }
+
+.scoreContainer {
+    border: 1px solid black;
+}
+
+.adviceContainer {
+    border: 1px solid blue;
+}
