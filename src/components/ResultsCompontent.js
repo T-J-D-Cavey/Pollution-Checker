@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
-import {useSelector, useDispatch} from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate, Link } from 'react-router-dom';
 
-import {scoreSelector, statusSelector, zoneSelector, changeZone} from '../redux/resultsSlice';
+import {scoreSelector, statusSelector, zoneSelector, linkSelector, changeZone} from '../redux/resultsSlice';
 import {LoadingComponent} from './LoadingComponent';
 import {ScoreComponent} from './ScoreComponent';
 import {zoneArray} from '../api/Api';
+import {CardComponent} from './CardComponent';
 
 export function ResultsComponent() {
 
@@ -14,11 +15,7 @@ export function ResultsComponent() {
     const score = useSelector(scoreSelector);
     const status = useSelector(statusSelector);
     const zone = useSelector(zoneSelector);
-
-    function clickHandler(e) {
-        e.preventDefault();
-        navigate('/');
-    }
+    const link = useSelector(linkSelector);
 
     useEffect(() => {
         if (score <= 50) {
@@ -40,10 +37,13 @@ export function ResultsComponent() {
             dispatch(changeZone(5));
         }
         else {
-            console.log(`Didn't register an eligible AQI score. Showing as ${score}`);
+            // This is supposed to fix an issue where refreshing on the results page results in a white screen. But it doesn't seem to work
+            navigate('/');
         }
 
     }, [])
+
+    console.log(link);
     
     return (
         status === 'loading' ?
@@ -52,13 +52,14 @@ export function ResultsComponent() {
         </div>
         :
         <div className={zoneArray[zone].color}>
-            <div><button onClick={clickHandler}>back icon</button></div>
+            <Link to='/'><button>back icon</button></Link>
             <div><ScoreComponent /></div>
             <div className='adviceContainer'>
-                <p>The latest air quality index (AQI) rating near you is considered '<span>{zoneArray[zone].Level}', with an AQI range of </span> <span>{zoneArray[zone].AQI}</span></p>
+                <p>The latest air quality index (AQI) rating <a href={link} target='_blank'>near you</a> is considered '<span>{zoneArray[zone].Level}', with an AQI range of </span> <span>{zoneArray[zone].AQI}</span></p>
                 <h3>Advice for current air quality:</h3>
                 <p>{zoneArray[zone].Implications}</p>
                 <p>Actions to consider: <span>{zoneArray[zone].Statement}</span></p>
+                <CardComponent />
             </div>
         </div>
     )
