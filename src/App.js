@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className='appContainer'>
       <Routes>
         <Route path='/' element={<ButtonComponent />}/>
         <Route path='results' element={<ResultsComponent />}/>

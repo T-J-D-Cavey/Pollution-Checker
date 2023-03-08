@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 
 import {getResults} from "../redux/resultsSlice";
 import {urlIp} from '../api/Api';
+import earthFumes from '../resources/earthFumes.svg';
 
 export function ButtonComponent() {
 
@@ -16,14 +17,13 @@ export function ButtonComponent() {
 
     function clickHandler(e) {
         e.preventDefault();
-        // dispatch(getResults(urlIp));
         navigate('results')
     }
 
     return (
-        <div>
+        <div className='buttonContainer'>
             <h1>How clean is the air today?</h1>
-            <div><button onClick={clickHandler}>image of button</button></div>
+            <div><button onClick={clickHandler}><img className='mainButton' src={earthFumes} alt='Earth in fumes'/></button></div>
         </div>
     )
 }

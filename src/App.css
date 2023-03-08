@@ -28,3 +28,7 @@
 .adviceContainer {
     border: 1px solid blue;
 }
+
+.mainButton {
+    width: 33vw;
+}
