@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 import {scoreSelector, statusSelector, zoneSelector, changeZone} from '../redux/resultsSlice';
 import {LoadingComponent} from './LoadingComponent';
-import {AdviceComponent} from './AdviceComponent';
+import {ScoreComponent} from './ScoreComponent';
+import {zoneArray} from '../api/Api';
 
 export function ResultsComponent() {
 
@@ -43,19 +44,16 @@ export function ResultsComponent() {
         }
 
     }, [])
-
     
-// need do to a ternary operator that if status shows as pending, show a pending componant, otherwise show the results componant:
     return (
         status === 'loading' ?
         <div>
             <LoadingComponent />
         </div>
         :
-        <div className={zone}>
+        <div className={zoneArray[zone].color}>
             <div><button onClick={clickHandler}>back icon</button></div>
-            <div>{score}</div>
-            <div><AdviceComponent /></div>
+            <div><ScoreComponent /></div>
         </div>
     )
 }
