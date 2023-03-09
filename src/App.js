@@ -13,6 +13,7 @@ function App() {
         <Route path='results' element={<ResultsComponent />}/>
         <Route path='*' element={<PageNotFound />}/>
       </Routes>
+      <footer><div>See the <a href='https://github.com/T-J-D-Cavey' target='_blank' >creator's Github page here</a></div></footer>
     </div>
   );
 }
