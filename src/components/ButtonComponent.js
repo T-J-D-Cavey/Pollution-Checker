@@ -23,7 +23,7 @@ export function ButtonComponent() {
     return (
         <div className='buttonContainer'>
             <h1>How clean is the air today?</h1>
-            <div><button onClick={clickHandler}><img className='mainButton' src={earthFumes} alt='Earth in fumes'/></button></div>
+            <div className='mainButton'><button onClick={clickHandler}><img src={earthFumes} alt='Earth in fumes'/></button></div>
         </div>
     )
 }

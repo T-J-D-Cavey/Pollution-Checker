@@ -7,6 +7,7 @@ import {FailedToLoadComponent} from './FailedToLoadComponent';
 import {ScoreComponent} from './ScoreComponent';
 import {zoneArray} from '../api/Api';
 import {CardComponent} from './CardComponent';
+import backIcon from '../resources/backIcon.svg';
 
 export function ResultsComponent() {
 
@@ -52,7 +53,7 @@ export function ResultsComponent() {
         </div>
         :
         <div className={zoneArray[zone].color}>
-            <Link to='/'><button>back icon</button></Link>
+            <Link to='/'><button><img className='backButton' src={backIcon} alt='back arrow' /></button></Link>
             <div><ScoreComponent /></div>
             <div className='adviceContainer'>
                 <p>The latest air quality index (AQI) rating <a href={link} target='_blank'>near you</a> is considered '<span>{zoneArray[zone].Level}', with an AQI range of </span> <span>{zoneArray[zone].AQI}</span></p>
