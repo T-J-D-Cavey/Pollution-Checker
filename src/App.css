@@ -6,8 +6,8 @@
     --font-p: 'Barlow', sans-serif;
     --color-cta: #55F018;
     --color-fog: #C4BEBE;
+    --color-blue: #E5FFFF;
     --color-text: #343434;
-
 }
 
 /* Reset styles: */
@@ -61,8 +61,17 @@ h1, h2, h3, p {
 
 /* Other styles: */
 
+/* I need to get the button container to take up the whole height so i can apply a background color animation  */
+/* changing the color from blue to the same grey of the font. I don't want this added to the body or app container */
+/* as this will also affect the next page */
+
+.buttonContainer {
+    background-color: var(--color-blue);
+
+}
 
 /* Button page: */
+
 
 h1 {
     font-family: var(--font-h1);
@@ -114,6 +123,7 @@ footer {
     align-items: center;
     max-width: 2000px;
     right: 50%;
+    background-color: white;
     transform: translateX(50%);
 }
 
