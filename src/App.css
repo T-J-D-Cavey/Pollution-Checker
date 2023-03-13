@@ -60,13 +60,30 @@ h1, h2, h3, p {
 }
 
 /* Other styles: */
-/* I need to get the button container to take up the whole height so i can apply a background color animation  */
-
-/* changing the color from blue to the same grey of the font. I don't want this added to the body or app container */
-/* as this will also affect the next page */
 
 body {
     background-color: var(--color-blue);
+    animation: backgroundChange 5s linear infinite alternate both;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-color: var(--color-blue);
+    }
+    100% {
+        background-color: var(--color-text);
+    }
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: underline;
+    /* Need to improve this */
+}
+
+a:visited {
+    color: var(--color-text);
+    text-decoration: none;
 }
 
 .buttonContainer {
@@ -144,7 +161,7 @@ footer > div {
 }
 
 .green {
-    background-color: green;
+    background-color: var(--color-blue);
 }
 
 .yellow {
