@@ -196,12 +196,17 @@ footer > div {
     margin: 2rem auto;
     text-align: center;
     padding: 1rem 0.5rem;
+    border-radius: 3%;
 }
 
+.scoreContainer:hover {
+    border: 1px solid var(--color-text)
+} 
+
 .scoreBox > div:nth-child(2) {
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 0.5rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .scoreBox > div:nth-child(3) {
@@ -212,7 +217,31 @@ footer > div {
     background-color: #009966;
 }
 
-.green > #scoreID > .scoreContainer > * {
+.yellow > #scoreID > .scoreContainer {
+    background-color: #FFDE33;
+}
+
+.orange > #scoreID > .scoreContainer {
+    background-color: #FF9933;
+}
+
+.yellow > #scoreID > .scoreContainer > *, .orange > #scoreID > .scoreContainer > * {
+    color: var(--color-text);
+}
+
+.red > #scoreID > .scoreContainer {
+    background-color: #CC0033;
+}
+
+.purple > #scoreID > .scoreContainer {
+    background-color: #660099;
+}
+
+.maroon > #scoreID > .scoreContainer {
+    background-color: #7e0023;
+}
+
+.green > #scoreID > .scoreContainer > *, .red > #scoreID > .scoreContainer > *, .purple > #scoreID > .scoreContainer > *, .maroon > #scoreID > .scoreContainer > * {
     color: white;
 }
 
