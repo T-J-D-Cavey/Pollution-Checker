@@ -164,25 +164,25 @@ footer > div {
 .green {
     background-color: var(--color-blue);
     height: 95vh;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .yellow {
     background-color: #e9e7e7;
     height: 95vh;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .orange {
     background-color: var(--color-fog);
     height: 95vh;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .red, .purple, .maroon {
     background-color: var(--color-text);
     height: 95vh;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .red *, .purple *, .marron * {
@@ -207,10 +207,12 @@ footer > div {
     font-size: 3rem;
     margin: 0.5rem;
     font-weight: 500;
+    font-family: var(--font-h2);
 }
 
 .scoreBox > div:nth-child(3) {
     font-size: 1.5rem;
+    font-family: var(--font-h2);
 }
 
 .green > #scoreID > .scoreContainer {
@@ -246,5 +248,31 @@ footer > div {
 }
 
 .adviceContainer {
-    border: 1px solid blue;
+    width: 90vw;
+    max-width: 40rem;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    border: 1px solid var(--color-text);
+    border-radius: 3%;
+    padding: 0 0.7rem;
+    background-color: var(--color-text);
+}
+
+.adviceContainer a {
+    font-weight: 700;
+    color: var(--color-cta);
+    text-decoration: underline;
+}
+
+.adviceContainer h3 {
+    font-size: 1.5rem;
+    font-family: var(--font-h2);
+}
+
+.adviceContainer > * {
+    margin: 1.5rem 0;
+    color: white;
+}
+
+.adviceContainer > :nth-child(1) {
 }

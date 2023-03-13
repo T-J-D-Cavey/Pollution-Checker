@@ -60,8 +60,8 @@ export function ResultsComponent() {
                 <h3>Advice for current air quality:</h3>
                 <p>{zoneArray[zone].Implications}</p>
                 <p>Actions to consider: <span>{zoneArray[zone].Statement}</span></p>
-                <CardComponent />
             </div>
+            <CardComponent />
         </div>
     )
 }
