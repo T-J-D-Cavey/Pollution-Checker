@@ -1,6 +1,6 @@
 export function CardComponent() {
     return (
-        <div>
+        <div className="cardContainer">
             <a href='https://en.wikipedia.org/wiki/Air_quality_index' target='_blank'>
                 <div>Air Quality Index wiki</div>
             </a>

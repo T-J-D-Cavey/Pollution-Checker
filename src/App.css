@@ -274,5 +274,44 @@ footer > div {
     color: white;
 }
 
-.adviceContainer > :nth-child(1) {
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer > * {
+    border: 1px solid var(--color-text);
+    border-radius: 3%;
+    width: 60%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 0.5rem 2rem 0.5rem;
+    background: linear-gradient(var(--color-fog), var(--color-blue))
+}
+
+.cardContainer > *:hover {
+    border: 2px solid var(--color-text);
+}
+
+.cardContainer > * > * {
+    width: 80%;
+    font-family: var(--font-h2);
+}
+
+/* For desktop and tablet screens only */
+@media screen and (min-width: 800px) {
+        .cardContainer {
+            flex-direction: row;
+
+        }
+
+        .cardContainer > * {
+            width: 10rem;
+            height: 10rem;
+        }
 }
