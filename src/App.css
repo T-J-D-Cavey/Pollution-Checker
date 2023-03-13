@@ -113,12 +113,13 @@ h1 {
     border-radius: 50%;
     box-shadow: 6px 6px var(--color-cta);
     margin: 1rem 3rem;
-    border: 2px solid var(--color-text)
+    border: 2px solid var(--color-text);
+    cursor: pointer;
 }
 
 
 .mainButton > button:hover {
-    cursor: pointer;
+    /* need to add styles here */
 }
 
 .mainButton > button:active {
@@ -158,8 +159,21 @@ footer > div {
 
 /* Results page: */
 .backButton {
-    width: 30px;
+    width: 3rem;
+    background-color: var(--color-cta);
+    border-radius: 50%;
+    box-shadow: 6px 6px var(--color-cta);
+    border: 2px solid var(--color-text);
 }
+
+button:has(.backButton) {
+    border: none;
+    cursor: pointer;
+    
+  }
+
+
+
 /* I need to add a sun animation to .green and .yellow and I need to add a fume/cloud animation to everything else: */
 .green {
     background-color: var(--color-blue);
