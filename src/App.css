@@ -60,14 +60,16 @@ h1, h2, h3, p {
 }
 
 /* Other styles: */
-
 /* I need to get the button container to take up the whole height so i can apply a background color animation  */
+
 /* changing the color from blue to the same grey of the font. I don't want this added to the body or app container */
 /* as this will also affect the next page */
 
-.buttonContainer {
+body {
     background-color: var(--color-blue);
+}
 
+.buttonContainer {
 }
 
 /* Button page: */
@@ -82,17 +84,18 @@ h1 {
 }
 
 .mainButton {
-    margin: 0 auto 0 auto;
-    width: 30vw;
-    max-width: 8rem;
-    min-width: 5rem;
-
+    margin: 4rem auto 0 auto;
+    width: 40vw;
+    max-width: 12rem;
+    min-width: 10rem;
 }
 
 .mainButton > button {
     background-color: var(--color-cta);
     border-radius: 50%;
-    box-shadow: 2.5px 2.5px var(--color-text);
+    box-shadow: 6px 6px var(--color-cta);
+    margin: 1rem 3rem;
+    border: 2px solid var(--color-text)
 }
 
 
@@ -101,7 +104,10 @@ h1 {
 }
 
 .mainButton > button:active {
-    box-shadow: -1px -1px var(--color-text);
+    box-shadow: 0 0 var(--color-text);
+    position: relative;
+    left: 4px;
+    top: 4px;
 }
 
 .mainButton > button > img {
