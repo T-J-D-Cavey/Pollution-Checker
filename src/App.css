@@ -63,7 +63,7 @@ h1, h2, h3, p {
 
 body {
     background-color: var(--color-blue);
-    animation: backgroundChange 5s linear infinite alternate both;
+    animation: backgroundChange 7s ease-in-out infinite alternate both;
 }
 
 @keyframes backgroundChange {
@@ -75,6 +75,10 @@ body {
     }
 }
 
+.appContainer > div {
+    
+}
+
 a {
     color: var(--color-text);
     text-decoration: underline;
@@ -84,9 +88,6 @@ a {
 a:visited {
     color: var(--color-text);
     text-decoration: none;
-}
-
-.buttonContainer {
 }
 
 /* Button page: */
@@ -159,17 +160,11 @@ footer > div {
 .backButton {
     width: 30px;
 }
-
+/* I need to add a sun animation to .green and .yellow and I need to add a fume/cloud animation to everything else: */
 .green {
-    background-color: #e9e7e7;
-    height: 95vh;
-    overflow: scroll;
-
-    /* This are the actual styles but I am testing other background styles above: 
     background-color: var(--color-blue);
     height: 95vh;
     overflow: scroll;
-     */
 }
 
 .yellow {
@@ -178,18 +173,20 @@ footer > div {
     overflow: scroll;
 }
 
-.red {
+.orange {
     background-color: var(--color-fog);
     height: 95vh;
     overflow: scroll;
 }
 
-.purple {
-    background-color: purple;
+.red, .purple, .maroon {
+    background-color: var(--color-text);
+    height: 95vh;
+    overflow: scroll;
 }
 
-.maroon {
-    background-color: maroon;
+.red *, .purple *, .marron * {
+    color: var(--color-blue);
 }
 
 .scoreContainer {
