@@ -81,7 +81,7 @@ body {
 
 a {
     color: var(--color-text);
-    text-decoration: underline;
+    text-decoration: none;
     /* Need to improve this */
 }
 
@@ -190,7 +190,30 @@ footer > div {
 }
 
 .scoreContainer {
-    border: 1px solid black;
+    width: 50vw;
+    min-width: 10rem;
+    max-width: 15rem;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1rem 0.5rem;
+}
+
+.scoreBox > div:nth-child(2) {
+    font-size: 2rem;
+    margin: 0.5rem;
+    font-weight: 600;
+}
+
+.scoreBox > div:nth-child(3) {
+    font-size: 1.5rem;
+}
+
+.green > #scoreID > .scoreContainer {
+    background-color: #009966;
+}
+
+.green > #scoreID > .scoreContainer > * {
+    color: white;
 }
 
 .adviceContainer {

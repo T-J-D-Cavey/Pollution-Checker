@@ -13,7 +13,7 @@ export function ScoreComponent() {
 
     return (
         <div className='scoreContainer'>
-            <a href={link} target='_blank'>
+            <a className='scoreBox' href={link} target='_blank'>
                 <div>{location}</div>
                 <div>{score}</div>
                 <div>{zoneArray[zone].Level}</div>

@@ -54,7 +54,7 @@ export function ResultsComponent() {
         :
         <div className={zoneArray[zone].color}>
             <Link to='/'><button><img className='backButton' src={backIcon} alt='back arrow' /></button></Link>
-            <div><ScoreComponent /></div>
+            <div id='scoreID'><ScoreComponent /></div>
             <div className='adviceContainer'>
                 <p>The latest air quality index (AQI) rating <a href={link} target='_blank'>near you</a> is considered '<span>{zoneArray[zone].Level}', with an AQI range of </span> <span>{zoneArray[zone].AQI}</span></p>
                 <h3>Advice for current air quality:</h3>
