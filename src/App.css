@@ -278,41 +278,50 @@ button:has(.backButton) {
 /* Clean Air Animation in results page: */
 
 .green .sun, .yellow .sun {
-    width: 15vw;
-    max-width: 5rem;
+    width: 4rem;
     position: absolute;
     left: 50%;
+    top: 1rem;
     z-index: 2;
-    animation: sunrise 8s linear infinite alternate both;
 }
 
 .green .cleanContainer > div:nth-child(1) img {
-    width: 8vw;
-    max-width: 4rem;
+    width: 4rem;
     position: absolute;
-    left: 45%;
+    left: 50%;
+    top: 1rem;
     z-index: 3;
+    animation: cloudLeft 3s ease-in-out infinite normal both;
 }
 
 .green .cleanContainer > div:nth-child(3) img {
-    width: 8vw;
-    max-width: 4rem;
+    width: 5rem;
     position: absolute;
-    left: 55%;
+    left: 50%;
+    top: 1rem;
     z-index: 3;
+    animation: cloudRight 3s ease-in-out infinite normal both;
 }
 
-.green .cleanContainer, .yellow .cleanContainer {
-}
-/* @keyframes sunrise {
+@keyframes cloudRight {
     0% {
-        transform: translate(0, 1rem);
+        transform: translate(0);
     }
 
     100% {
-        transform: translate(0, -20rem);
-    } */
-/* } */
+        transform: translate(4rem, 0);
+    }
+}
+
+@keyframes cloudLeft {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-4rem, 0);
+    }
+}
 
 .orange .cleanContainer, .red .cleanContainer, .purple .cleanContainer, .maroon .cleanContainer {
     display: none;
