@@ -76,10 +76,6 @@ body {
     }
   }
 
-body * {
-    z-index: 3;
-}
-
 a {
     color: var(--color-text);
     text-decoration: none;
@@ -227,6 +223,8 @@ button:has(.backButton) {
     padding: 1rem 0.5rem;
     border-radius: 3%;
     border: 1.5px solid transparent;
+    position: relative;
+    z-index: 5;
 }
 
 .scoreContainer:hover {
@@ -277,18 +275,35 @@ button:has(.backButton) {
     color: white;
 }
 
-/* sun and fog animations in results page: */
+/* Clean Air Animation in results page: */
 
 .green .sun, .yellow .sun {
     width: 15vw;
     max-width: 5rem;
-    position: relative;
+    position: absolute;
     left: 50%;
     z-index: 2;
-    margin-bottom: -2rem;
     animation: sunrise 8s linear infinite alternate both;
 }
 
+.green .cleanContainer > div:nth-child(1) img {
+    width: 8vw;
+    max-width: 4rem;
+    position: absolute;
+    left: 45%;
+    z-index: 3;
+}
+
+.green .cleanContainer > div:nth-child(3) img {
+    width: 8vw;
+    max-width: 4rem;
+    position: absolute;
+    left: 55%;
+    z-index: 3;
+}
+
+.green .cleanContainer, .yellow .cleanContainer {
+}
 /* @keyframes sunrise {
     0% {
         transform: translate(0, 1rem);
@@ -299,7 +314,7 @@ button:has(.backButton) {
     } */
 /* } */
 
-.orange .sun, .red .sun, .purple .sun, .maroon .sun {
+.orange .cleanContainer, .red .cleanContainer, .purple .cleanContainer, .maroon .cleanContainer {
     display: none;
 }
 
@@ -316,6 +331,8 @@ button:has(.backButton) {
     border-radius: 3%;
     padding: 0 0.7rem;
     background-color: var(--color-text);
+    position: relative;
+    z-index: 5;
 }
 
 .adviceContainer a {
@@ -339,6 +356,8 @@ button:has(.backButton) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 5;
 }
 
 .cardContainer > * {
@@ -369,6 +388,7 @@ button:has(.backButton) {
     margin: 0 auto;
     position: relative;
     bottom: 2rem;
+    z-index: 5;
 }
 
 .earthIconResults img {
