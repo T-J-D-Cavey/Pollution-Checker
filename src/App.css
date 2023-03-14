@@ -62,22 +62,18 @@ h1, h2, h3, p {
 /* Other styles: */
 
 body {
-    background-color: var(--color-blue);
     animation: backgroundChange 7s ease-in-out infinite alternate both;
-}
-
-@keyframes backgroundChange {
+    background-color: var(--color-blue);
+  }
+  
+  @keyframes backgroundChange {
     0% {
         background-color: var(--color-blue);
     }
     100% {
         background-color: var(--color-text);
     }
-}
-
-.appContainer > div {
-    
-}
+  }
 
 a {
     color: var(--color-text);
@@ -146,7 +142,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 2000px;
+    max-width: 3000px;
     right: 50%;
     background-color: white;
     transform: translateX(50%);
@@ -157,45 +153,62 @@ footer > div {
     padding: 0.5rem;
 }
 
+footer a {
+    color: var(--color-text);
+    font-weight: 900;
+}
+
+footer a:hover {
+    color: var(--color-cta);
+}
+
 /* Results page: */
 .backButton {
     width: 3rem;
     background-color: var(--color-cta);
     border-radius: 50%;
-    box-shadow: 6px 6px var(--color-cta);
-    border: 2px solid var(--color-text);
+    box-shadow: 3px 3px var(--color-cta);
+    border: 1.5px solid var(--color-text);
 }
 
 button:has(.backButton) {
     border: none;
+    background-color: transparent;
     cursor: pointer;
-    
+    margin-top: 0.3rem;
   }
+
+.backButton:active {
+   box-shadow: 0 0 var(--color-text);
+   position: relative;
+   left: 3px;
+   top: 3px;
+ }
 
 
 
 /* I need to add a sun animation to .green and .yellow and I need to add a fume/cloud animation to everything else: */
 .green {
     background-color: var(--color-blue);
-    height: 95vh;
+    height: 100vh;
     overflow-y: scroll;
 }
 
 .yellow {
     background-color: #e9e7e7;
-    height: 95vh;
+    height: 100vh;
     overflow-y: scroll;
 }
 
 .orange {
     background-color: var(--color-fog);
-    height: 95vh;
+    height: 100vh;
     overflow-y: scroll;
 }
 
 .red, .purple, .maroon {
     background-color: var(--color-text);
-    height: 95vh;
+    height: 100vh;
     overflow-y: scroll;
 }
 
@@ -211,10 +224,11 @@ button:has(.backButton) {
     text-align: center;
     padding: 1rem 0.5rem;
     border-radius: 3%;
+    border: 1.5px solid transparent;
 }
 
 .scoreContainer:hover {
-    border: 1px solid var(--color-text)
+    border: 1.5px solid var(--color-text);
 } 
 
 .scoreBox > div:nth-child(2) {
@@ -296,7 +310,7 @@ button:has(.backButton) {
 }
 
 .cardContainer > * {
-    border: 1px solid var(--color-text);
+    border: 1px solid var(--color-fog);
     border-radius: 3%;
     width: 60%;
     height: 10rem;
@@ -309,7 +323,7 @@ button:has(.backButton) {
 }
 
 .cardContainer > *:hover {
-    border: 2px solid var(--color-text);
+    border: 1px solid var(--color-text);
 }
 
 .cardContainer > * > * {
