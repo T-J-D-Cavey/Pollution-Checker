@@ -8,6 +8,8 @@ import {ScoreComponent} from './ScoreComponent';
 import {zoneArray} from '../api/Api';
 import {CardComponent} from './CardComponent';
 import backIcon from '../resources/backIcon.svg';
+import earthFumes from '../resources/earthFumes.svg';
+import sunIcon from '../resources/sunIcon.svg';
 
 export function ResultsComponent() {
 
@@ -54,6 +56,7 @@ export function ResultsComponent() {
         :
         <div className={zoneArray[zone].color}>
             <Link to='/'><button><img className='backButton' src={backIcon} alt='back arrow' /></button></Link>
+            <div className='sun'><img src={sunIcon} alt='sun'/></div>
             <div id='scoreID'><ScoreComponent /></div>
             <div className='adviceContainer'>
                 <p>The latest air quality index (AQI) rating <a href={link} target='_blank'>near you</a> is considered '<span>{zoneArray[zone].Level}', with an AQI range of </span> <span>{zoneArray[zone].AQI}</span></p>
@@ -62,6 +65,7 @@ export function ResultsComponent() {
                 <p>Actions to consider: <span>{zoneArray[zone].Statement}</span></p>
             </div>
             <CardComponent />
+            <div className='earthIconResults'><img src={earthFumes} alt='earth icon' /></div>
         </div>
     )
 }

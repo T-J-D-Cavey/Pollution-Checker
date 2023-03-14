@@ -188,6 +188,7 @@ button:has(.backButton) {
 
 
 /* I need to add a sun animation to .green and .yellow and I need to add a fume/cloud animation to everything else: */
+
 .green {
     background-color: var(--color-blue);
     height: 100vh;
@@ -275,6 +276,36 @@ button:has(.backButton) {
     color: white;
 }
 
+/* sun and fog animations in results page: */
+
+.green .sun, .yellow .sun {
+    width: 15vw;
+    max-width: 5rem;
+    position: absolute;
+    /* left: 43%;
+    top: 20%; */
+    /* z-index: -1; */
+    animation: sunrise 8 linear infinite alternate both;
+}
+
+@keyframes sunrise {
+    0% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+.orange .sun, .red .sun, .purple .sun, .maroon .sun {
+    display: none;
+}
+
+.sun img {
+    width: 100%;
+}
+
 .adviceContainer {
     width: 90vw;
     max-width: 40rem;
@@ -329,6 +360,18 @@ button:has(.backButton) {
 .cardContainer > * > * {
     width: 80%;
     font-family: var(--font-h2);
+}
+
+.earthIconResults {
+    width: 50%;
+    max-width: 40rem;
+    margin: 0 auto;
+    position: relative;
+    bottom: 2rem;
+}
+
+.earthIconResults img {
+    width: 100%;
 }
 
 /* For desktop and tablet screens only */
