@@ -315,13 +315,13 @@ button:has(.backButton) {
     animation: cloudRight 4.5s ease-in-out 1 normal forwards;
 }
 
-/* .green .cleanContainer > div:nth-child(1) img, .red .cleanContainer > div:nth-child(1) img, .purple .cleanContainer > div:nth-child(1) img, .maroon .cleanContainer > div:nth-child(1) img {
+.orange .cleanContainer > div:nth-child(1) img, .red .cleanContainer > div:nth-child(1) img, .purple .cleanContainer > div:nth-child(1) img, .maroon .cleanContainer > div:nth-child(1) img {
     animation: fromLeft 4.6s ease-in-out 1 normal forwards;
 }
 
-.green .cleanContainer > div:nth-child(3) img, .red .cleanContainer > div:nth-child(3) img, .purple .cleanContainer > div:nth-child(3) img, .maroon .cleanContainer > div:nth-child(3) img {
+.orange .cleanContainer > div:nth-child(3) img, .red .cleanContainer > div:nth-child(3) img, .purple .cleanContainer > div:nth-child(3) img, .maroon .cleanContainer > div:nth-child(3) img {
     animation: fromRight 4.5s ease-in-out 1 normal forwards;
-} */
+}
 
 @keyframes cloudRight {
     0% {
