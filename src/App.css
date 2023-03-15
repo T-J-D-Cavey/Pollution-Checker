@@ -147,6 +147,7 @@ footer {
     right: 50%;
     background-color: white;
     transform: translateX(50%);
+    z-index: 6;
 }
 
 footer > div {
@@ -275,32 +276,50 @@ button:has(.backButton) {
     color: white;
 }
 
-/* Clean Air Animation in results page: */
+/* Air Animation in results page: */
 
-.green .sun, .yellow .sun {
+.cleanContainer > div {
+    position: relative;
+    }
+
+    
+.cleanContainer > div:nth-child(1) img {
     width: 4rem;
     position: absolute;
     left: 50%;
-    top: 1rem;
-    z-index: 2;
-}
-
-.green .cleanContainer > div:nth-child(1) img {
-    width: 4rem;
-    position: absolute;
-    left: 50%;
-    top: 1rem;
+    top: -3rem;
     z-index: 3;
-    animation: cloudLeft 3s ease-in-out infinite normal both;
 }
 
-.green .cleanContainer > div:nth-child(3) img {
+.cleanContainer > div:nth-child(3) img {
     width: 5rem;
     position: absolute;
     left: 50%;
-    top: 1rem;
+    top: -3rem;
     z-index: 3;
+}
+
+.cleanContainer > div:nth-child(2) img {
+    width: 4rem;
+    position: absolute;
+    left: 50%;
+    top: -2.6rem;
+    z-index: 1;
+}
+/* .green .cleanContainer > div:nth-child(1) img, .yellow .cleanContainer > div:nth-child(1) img {
+    animation: cloudLeft 3s ease-in-out infinite normal both;
+}
+
+.green .cleanContainer > div:nth-child(3) img, .yellow .cleanContainer > div:nth-child(3) img {
     animation: cloudRight 3s ease-in-out infinite normal both;
+} */
+
+.green .cleanContainer > div:nth-child(1) img, .red .cleanContainer > div:nth-child(1) img, .purple .cleanContainer > div:nth-child(1) img, .maroon .cleanContainer > div:nth-child(1) img {
+    animation: fromLeft 3s ease-in-out infinite normal both;
+}
+
+.green .cleanContainer > div:nth-child(3) img, .red .cleanContainer > div:nth-child(3) img, .purple .cleanContainer > div:nth-child(3) img, .maroon .cleanContainer > div:nth-child(3) img {
+    animation: fromRight 3s ease-in-out infinite normal both;
 }
 
 @keyframes cloudRight {
@@ -320,6 +339,26 @@ button:has(.backButton) {
 
     100% {
         transform: translate(-4rem, 0);
+    }
+}
+
+@keyframes fromRight {
+    0% {
+        transform: translate(4rem, 0);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes fromLeft {
+    0% {
+        transform: translate(-4rem, 0);
+    }
+
+    100% {
+        transform: translate(0);
     }
 }
 
