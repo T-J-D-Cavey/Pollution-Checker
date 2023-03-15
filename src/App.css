@@ -284,7 +284,7 @@ button:has(.backButton) {
 
     
 .cleanContainer > div:nth-child(1) img {
-    width: 4rem;
+    width: 3.5rem;
     position: absolute;
     left: 50%;
     top: -3rem;
@@ -292,7 +292,7 @@ button:has(.backButton) {
 }
 
 .cleanContainer > div:nth-child(3) img {
-    width: 5rem;
+    width: 6rem;
     position: absolute;
     left: 50%;
     top: -3rem;
@@ -300,27 +300,28 @@ button:has(.backButton) {
 }
 
 .cleanContainer > div:nth-child(2) img {
-    width: 4rem;
+    width: 3.5rem;
     position: absolute;
     left: 50%;
-    top: -2.6rem;
+    top: -2.3rem;
     z-index: 1;
 }
-/* .green .cleanContainer > div:nth-child(1) img, .yellow .cleanContainer > div:nth-child(1) img {
-    animation: cloudLeft 3s ease-in-out infinite normal both;
+
+.green .cleanContainer > div:nth-child(1) img, .yellow .cleanContainer > div:nth-child(1) img {
+    animation: cloudLeft 4.6s ease-in-out 1 normal forwards
 }
 
 .green .cleanContainer > div:nth-child(3) img, .yellow .cleanContainer > div:nth-child(3) img {
-    animation: cloudRight 3s ease-in-out infinite normal both;
-} */
+    animation: cloudRight 4.5s ease-in-out 1 normal forwards;
+}
 
-.green .cleanContainer > div:nth-child(1) img, .red .cleanContainer > div:nth-child(1) img, .purple .cleanContainer > div:nth-child(1) img, .maroon .cleanContainer > div:nth-child(1) img {
-    animation: fromLeft 3s ease-in-out infinite normal both;
+/* .green .cleanContainer > div:nth-child(1) img, .red .cleanContainer > div:nth-child(1) img, .purple .cleanContainer > div:nth-child(1) img, .maroon .cleanContainer > div:nth-child(1) img {
+    animation: fromLeft 4.6s ease-in-out 1 normal forwards;
 }
 
 .green .cleanContainer > div:nth-child(3) img, .red .cleanContainer > div:nth-child(3) img, .purple .cleanContainer > div:nth-child(3) img, .maroon .cleanContainer > div:nth-child(3) img {
-    animation: fromRight 3s ease-in-out infinite normal both;
-}
+    animation: fromRight 4.5s ease-in-out 1 normal forwards;
+} */
 
 @keyframes cloudRight {
     0% {
