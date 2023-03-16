@@ -79,7 +79,6 @@ body {
 a {
     color: var(--color-text);
     text-decoration: none;
-    /* Need to improve this */
 }
 
 a:visited {
@@ -87,8 +86,14 @@ a:visited {
     text-decoration: none;
 }
 
-/* Button page: */
+/* Failed to load page: */
 
+.failedToLoadContainer {
+    width: 75vw;
+    margin: 5rem auto 0 auto;
+}
+
+/* Button page: */
 
 h1 {
     font-family: var(--font-h1);
@@ -116,7 +121,7 @@ h1 {
 
 
 .mainButton > button:hover {
-    /* need to add styles here */
+    border: 2px solid black;
 }
 
 .mainButton > button:active {

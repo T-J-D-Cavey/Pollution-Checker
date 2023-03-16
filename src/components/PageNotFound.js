@@ -13,7 +13,7 @@ export function PageNotFound() {
     }, [])
     
     return (
-        <div>
+        <div className='FailedToLoadContainer'>
             <h3>Page not found...</h3>
         </div>
     )

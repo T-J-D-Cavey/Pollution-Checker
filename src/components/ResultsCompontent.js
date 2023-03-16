@@ -9,8 +9,7 @@ import {zoneArray} from '../api/Api';
 import {CardComponent} from './CardComponent';
 import backIcon from '../resources/backIcon.svg';
 import earthFumes from '../resources/earthFumes.svg';
-import sunIcon from '../resources/sunIcon.svg';
-import { CleanAirAnimation } from './CleanAirAnimation';
+import {CleanAirAnimation} from './CleanAirAnimation';
 
 export function ResultsComponent() {
 
@@ -58,7 +57,6 @@ export function ResultsComponent() {
         :
         <div className={zoneArray[zone].color} id='resultsContainer'>
             <Link to='/'><button><img className='backButton' src={backIcon} alt='back arrow' /></button></Link>
-            {/* <div className='sun'><img src={sunIcon} alt='sun'/></div> */}
             <CleanAirAnimation />
             <div id='scoreID'><ScoreComponent /></div>
             <div className='adviceContainer'>

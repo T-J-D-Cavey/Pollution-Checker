@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// Async thunk to retrive air pollution score based on nearest station to user IP address:
 export const getResults = createAsyncThunk(
     'results/getResults',
     async (url) => {

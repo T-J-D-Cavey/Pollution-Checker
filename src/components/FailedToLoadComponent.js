@@ -13,7 +13,7 @@ export function FailedToLoadComponent() {
     }, [])
  
     return (
-        <div>
+        <div className='failedToLoadContainer'>
             <h3>Failed to retrieve air pollution data...</h3>
         </div>
     )
