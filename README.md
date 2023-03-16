@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Pollution Checker - How clean is the air today?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Check air quality and pollution near you with this 'Pollution checker' web app: *URL to be added here*. 
 
-## Available Scripts
+## What is this project?
 
-In the project directory, you can run:
+This app uses the World Air Quality Index (WAQI) API to check the levels of local air pollution and provides health implications based on the results. The appearance of the app will vary depending on the local air quality at that time. 
 
-### `npm start`
+This is a portfolio project intended to showcase front end web development skills.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to use the Pollution Checker?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+When you visit the site, you should be presented with a header and a button. Click or tap on this button and the app will make a call to an API that uses the geo-location of your IP address to find the nearest air quality station to you. 
 
-### `npm test`
+Based on the results of this, you'll be taken to a screen that shows you the air quality index (score), and health implications based on this score.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You'll also see links to other resources that explain what the WAQI is, what air pollution is, and a global campaign page called 'Action for clearn air'.
 
-### `npm run build`
+## Why was this project made?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project was made in order to showcase and reinforce learnings of how React components and Redux state management work together, working with a third party API and providing a function for users.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+It's not perfectly written and could be refactored in a number of places. The focus was to keep all 'state' within the redux store, to make the appearance dynamic based on the current local air quality (based on the results of the API response), and to be fast performing.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What is this project made with?
 
-### `npm run eject`
+- React
+- Redux
+- NPM
+- Javascript
+- CSS
+- VSCode
+- Git & Github
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Any call outs on the structure or function of the app?
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### When does the call to the API get made?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+There hasn't been a 'loading' page created for this app. Despite createAsyncThunk and CreateSlice redux functions allowing a pending state, the call to the WAQI API is made when the '/' homepage is rendered. As a result, the app state 'extra reducers' will either be set to 'failed' or 'fullfilled' by the time the user clicks on the button to request the results.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### How do the dynamic styles work based on the results of the API?
 
-## Learn More
+I created an array which lists all the options for air quality, including AQI, level, implications and associated colour. I then set the 'zone' state based on the results to a number between 0-5. This correlates to the index of the array that is assocated with that air quality range. I then apply a dynamic className to the div container of the results component. I apply all of the styles using this class to target that element and its decendants. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## What license do you have?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+MIT License
 
-### Code Splitting
+Copyright (c) 2023 Tim Cavey
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-### Analyzing the Bundle Size
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
