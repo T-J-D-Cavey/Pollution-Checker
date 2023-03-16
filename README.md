@@ -1,6 +1,6 @@
 # Pollution Checker - How clean is the air today?
 
-Check air quality and pollution near you with this 'Pollution checker' web app: *URL to be added here*. 
+Check air quality and pollution near you with this 'Pollution checker' web app: https://pollution-checker.netlify.app/ 
 
 ## What is this project?
 
