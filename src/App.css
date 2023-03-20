@@ -111,18 +111,16 @@ h1 {
 
 .mainButton {
     margin: 4rem auto 0 auto;
-    width: 40vw;
-    max-width: 12rem;
-    min-width: 10rem;
+    width: 5rem;
 }
 
 .mainButton > button {
     background-color: var(--color-cta);
     border-radius: 50%;
     box-shadow: 6px 6px var(--color-cta);
-    margin: 1rem 3rem;
     border: 2px solid var(--color-text);
     cursor: pointer;
+    width: 100%;
 }
 
 
@@ -465,5 +463,9 @@ button:has(.backButton) {
         .cardContainer > * {
             width: 10rem;
             height: 10rem;
+        }
+
+        .mainButton {
+            width: 6rem;
         }
 }
