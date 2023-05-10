@@ -12,8 +12,12 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    excludeSpecPattern: "**/2-advanced-examples/*",
+    baseUrl: "http://localhost:3000/",
   },
   
 });
+
+// cypress config documentation: https://docs.cypress.io/guides/references/configuration
 
 
