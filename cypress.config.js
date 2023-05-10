@@ -12,7 +12,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    excludeSpecPattern: "**/2-advanced-examples/*",
+    excludeSpecPattern: ["**/2-advanced-examples/*", "**/1-getting-started/*"],
     baseUrl: "http://localhost:3000/",
   },
   
