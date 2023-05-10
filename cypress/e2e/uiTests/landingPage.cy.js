@@ -36,6 +36,9 @@ describe('Landing page', () => {
     it('confirm footer appears', () => {
     // Gets all elements by specific attributes:
         cy.get("[target='_blank']");
+    // Gets the element with that attribute, removes the 'open in new tab' setting and clicks it:
+        // cy.get("[target='_blank']").invoke('removeAttr', 'target').click()
+        
     // Selects the one element / descendant based on it's content, and tag name:
         cy.contains('footer', 'See the');
         cy.contains('footer', "creator's Github page here")
